@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="zGb-T5-5CG">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="IeG-7l-RQh">
+            <objects>
+                <navigationController id="zGb-T5-5CG" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="wAy-iz-BOg">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="fWf-Qm-KnK" kind="relationship" relationship="rootViewController" id="Sc1-Yb-kT1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="esf-Iy-7Ru" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4271" y="1000"/>
+        </scene>
+        <!--身份证识别-->
+        <scene sceneID="wpz-et-z6K">
+            <objects>
+                <viewController id="fWf-Qm-KnK" customClass="RecognizeCardViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="06r-W0-WfI"/>
+                        <viewControllerLayoutGuide type="bottom" id="Bmg-h0-cpR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="x0j-QY-3H2">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请选择图片" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9At-x8-PEs">
+                                <rect key="frame" x="0.0" y="11" width="320" height="44"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="80g-2S-X9c"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ctz-rS-NHC">
+                                <rect key="frame" x="20" y="431" width="122" height="45"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="6rg-rC-0vt"/>
+                                    <constraint firstAttribute="width" constant="122" id="eXr-DG-0Wc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="拍照">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="cameraAction:" destination="fWf-Qm-KnK" eventType="touchUpInside" id="kcG-8b-LOz"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_default" translatesAutoresizingMaskIntoConstraints="NO" id="3Lx-qa-XTc">
+                                <rect key="frame" x="0.0" y="79" width="320" height="326"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GHq-i1-56F">
+                                <rect key="frame" x="178" y="431" width="122" height="45"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="122" id="93n-Ud-zp8"/>
+                                    <constraint firstAttribute="height" constant="45" id="gg8-9b-siq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="相册">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="photoAction:" destination="fWf-Qm-KnK" eventType="touchUpInside" id="gIX-57-J32"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="GHq-i1-56F" secondAttribute="trailing" constant="20" id="1hb-dL-TlJ"/>
+                            <constraint firstItem="3Lx-qa-XTc" firstAttribute="leading" secondItem="x0j-QY-3H2" secondAttribute="leading" id="1xv-sl-Qhw"/>
+                            <constraint firstItem="9At-x8-PEs" firstAttribute="top" secondItem="06r-W0-WfI" secondAttribute="bottom" constant="11" id="6we-cQ-CBP"/>
+                            <constraint firstItem="Ctz-rS-NHC" firstAttribute="leading" secondItem="x0j-QY-3H2" secondAttribute="leading" constant="20" id="IB9-iB-2E1"/>
+                            <constraint firstItem="GHq-i1-56F" firstAttribute="width" secondItem="Ctz-rS-NHC" secondAttribute="width" id="Iyf-78-JgL"/>
+                            <constraint firstAttribute="trailing" secondItem="3Lx-qa-XTc" secondAttribute="trailing" id="KZt-rH-YBG"/>
+                            <constraint firstItem="Bmg-h0-cpR" firstAttribute="top" secondItem="Ctz-rS-NHC" secondAttribute="bottom" constant="28" id="NOo-nV-unh"/>
+                            <constraint firstItem="GHq-i1-56F" firstAttribute="leading" secondItem="Ctz-rS-NHC" secondAttribute="trailing" constant="36" id="W4M-9A-foZ"/>
+                            <constraint firstAttribute="trailing" secondItem="9At-x8-PEs" secondAttribute="trailing" id="Z6Q-bq-Mql"/>
+                            <constraint firstItem="GHq-i1-56F" firstAttribute="top" secondItem="3Lx-qa-XTc" secondAttribute="bottom" constant="26" id="duT-Mu-9Rp"/>
+                            <constraint firstItem="3Lx-qa-XTc" firstAttribute="top" secondItem="9At-x8-PEs" secondAttribute="bottom" constant="24" id="ej4-uj-Nd1"/>
+                            <constraint firstItem="Ctz-rS-NHC" firstAttribute="top" secondItem="3Lx-qa-XTc" secondAttribute="bottom" constant="26" id="lP7-Kg-8e9"/>
+                            <constraint firstItem="9At-x8-PEs" firstAttribute="leading" secondItem="x0j-QY-3H2" secondAttribute="leading" id="qBS-Mv-WL0"/>
+                            <constraint firstItem="Bmg-h0-cpR" firstAttribute="top" secondItem="GHq-i1-56F" secondAttribute="bottom" constant="28" id="zvC-pW-ayC"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="身份证识别" id="TQ7-Lw-YZo"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="imgView" destination="3Lx-qa-XTc" id="mWH-9b-CRr"/>
+                        <outlet property="textLabel" destination="9At-x8-PEs" id="fnC-ST-EGE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JR1-Ky-olt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4729" y="1000"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="img_default" width="383" height="445"/>
+    </resources>
+</document>

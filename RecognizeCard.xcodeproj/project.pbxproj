@@ -1,0 +1,621 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1ADEE452AE696D56E911336A /* libPods-RecognizeCard.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C61B490379A696F6398244C0 /* libPods-RecognizeCard.a */; };
+		942078EA1D76A81E00E2307D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 942078E91D76A81E00E2307D /* main.m */; };
+		942078ED1D76A81E00E2307D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 942078EC1D76A81E00E2307D /* AppDelegate.m */; };
+		942078F31D76A81E00E2307D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 942078F11D76A81E00E2307D /* Main.storyboard */; };
+		942078F51D76A81E00E2307D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 942078F41D76A81E00E2307D /* Assets.xcassets */; };
+		942078F81D76A81E00E2307D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 942078F61D76A81E00E2307D /* LaunchScreen.storyboard */; };
+		942079031D76A81E00E2307D /* RecognizeCardTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 942079021D76A81E00E2307D /* RecognizeCardTests.m */; };
+		9420790E1D76A81E00E2307D /* RecognizeCardUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9420790D1D76A81E00E2307D /* RecognizeCardUITests.m */; };
+		942079211D76BC8D00E2307D /* RecogizeCardManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 942079201D76BC8D00E2307D /* RecogizeCardManager.mm */; };
+		942079241D76C20200E2307D /* RecognizeCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 942079231D76C20200E2307D /* RecognizeCardViewController.m */; };
+		942079261D76C52200E2307D /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = 942079251D76C52200E2307D /* tessdata */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		942078FF1D76A81E00E2307D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 942078DD1D76A81E00E2307D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 942078E41D76A81E00E2307D;
+			remoteInfo = RecognizeCard;
+		};
+		9420790A1D76A81E00E2307D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 942078DD1D76A81E00E2307D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 942078E41D76A81E00E2307D;
+			remoteInfo = RecognizeCard;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		7CF1B62443E24354F1A2762C /* Pods-RecognizeCard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecognizeCard.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RecognizeCard/Pods-RecognizeCard.debug.xcconfig"; sourceTree = "<group>"; };
+		91F0D5377C0D38B8C6EC29D9 /* Pods-RecognizeCard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecognizeCard.release.xcconfig"; path = "Pods/Target Support Files/Pods-RecognizeCard/Pods-RecognizeCard.release.xcconfig"; sourceTree = "<group>"; };
+		942078E51D76A81E00E2307D /* RecognizeCard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecognizeCard.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		942078E91D76A81E00E2307D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		942078EB1D76A81E00E2307D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		942078EC1D76A81E00E2307D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		942078F21D76A81E00E2307D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		942078F41D76A81E00E2307D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		942078F71D76A81E00E2307D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		942078F91D76A81E00E2307D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		942078FE1D76A81E00E2307D /* RecognizeCardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecognizeCardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		942079021D76A81E00E2307D /* RecognizeCardTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RecognizeCardTests.m; sourceTree = "<group>"; };
+		942079041D76A81E00E2307D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		942079091D76A81E00E2307D /* RecognizeCardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecognizeCardUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9420790D1D76A81E00E2307D /* RecognizeCardUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RecognizeCardUITests.m; sourceTree = "<group>"; };
+		9420790F1D76A81E00E2307D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9420791F1D76BC8D00E2307D /* RecogizeCardManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecogizeCardManager.h; sourceTree = "<group>"; };
+		942079201D76BC8D00E2307D /* RecogizeCardManager.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RecogizeCardManager.mm; sourceTree = "<group>"; };
+		942079221D76C20200E2307D /* RecognizeCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecognizeCardViewController.h; sourceTree = "<group>"; };
+		942079231D76C20200E2307D /* RecognizeCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecognizeCardViewController.m; sourceTree = "<group>"; };
+		942079251D76C52200E2307D /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tessdata; sourceTree = "<group>"; };
+		C61B490379A696F6398244C0 /* libPods-RecognizeCard.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RecognizeCard.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		942078E21D76A81E00E2307D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1ADEE452AE696D56E911336A /* libPods-RecognizeCard.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		942078FB1D76A81E00E2307D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		942079061D76A81E00E2307D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		090774C45F3AFB4C11356215 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7CF1B62443E24354F1A2762C /* Pods-RecognizeCard.debug.xcconfig */,
+				91F0D5377C0D38B8C6EC29D9 /* Pods-RecognizeCard.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		8F3848708645224D817CAE3F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C61B490379A696F6398244C0 /* libPods-RecognizeCard.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		942078DC1D76A81E00E2307D = {
+			isa = PBXGroup;
+			children = (
+				942078E71D76A81E00E2307D /* RecognizeCard */,
+				942079011D76A81E00E2307D /* RecognizeCardTests */,
+				9420790C1D76A81E00E2307D /* RecognizeCardUITests */,
+				942078E61D76A81E00E2307D /* Products */,
+				090774C45F3AFB4C11356215 /* Pods */,
+				8F3848708645224D817CAE3F /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		942078E61D76A81E00E2307D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				942078E51D76A81E00E2307D /* RecognizeCard.app */,
+				942078FE1D76A81E00E2307D /* RecognizeCardTests.xctest */,
+				942079091D76A81E00E2307D /* RecognizeCardUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		942078E71D76A81E00E2307D /* RecognizeCard */ = {
+			isa = PBXGroup;
+			children = (
+				9420791B1D76B84400E2307D /* RecogizeCardManager */,
+				942078EB1D76A81E00E2307D /* AppDelegate.h */,
+				942078EC1D76A81E00E2307D /* AppDelegate.m */,
+				942079221D76C20200E2307D /* RecognizeCardViewController.h */,
+				942079231D76C20200E2307D /* RecognizeCardViewController.m */,
+				942078F11D76A81E00E2307D /* Main.storyboard */,
+				942078F41D76A81E00E2307D /* Assets.xcassets */,
+				942078F61D76A81E00E2307D /* LaunchScreen.storyboard */,
+				942078F91D76A81E00E2307D /* Info.plist */,
+				942078E81D76A81E00E2307D /* Supporting Files */,
+			);
+			path = RecognizeCard;
+			sourceTree = "<group>";
+		};
+		942078E81D76A81E00E2307D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				942078E91D76A81E00E2307D /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		942079011D76A81E00E2307D /* RecognizeCardTests */ = {
+			isa = PBXGroup;
+			children = (
+				942079021D76A81E00E2307D /* RecognizeCardTests.m */,
+				942079041D76A81E00E2307D /* Info.plist */,
+			);
+			path = RecognizeCardTests;
+			sourceTree = "<group>";
+		};
+		9420790C1D76A81E00E2307D /* RecognizeCardUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9420790D1D76A81E00E2307D /* RecognizeCardUITests.m */,
+				9420790F1D76A81E00E2307D /* Info.plist */,
+			);
+			path = RecognizeCardUITests;
+			sourceTree = "<group>";
+		};
+		9420791B1D76B84400E2307D /* RecogizeCardManager */ = {
+			isa = PBXGroup;
+			children = (
+				942079251D76C52200E2307D /* tessdata */,
+				9420791F1D76BC8D00E2307D /* RecogizeCardManager.h */,
+				942079201D76BC8D00E2307D /* RecogizeCardManager.mm */,
+			);
+			name = RecogizeCardManager;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		942078E41D76A81E00E2307D /* RecognizeCard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 942079121D76A81E00E2307D /* Build configuration list for PBXNativeTarget "RecognizeCard" */;
+			buildPhases = (
+				A1625FAA57232035D9B6F180 /* [CP] Check Pods Manifest.lock */,
+				942078E11D76A81E00E2307D /* Sources */,
+				942078E21D76A81E00E2307D /* Frameworks */,
+				942078E31D76A81E00E2307D /* Resources */,
+				A031F5E466FFC708E66AF7A3 /* [CP] Embed Pods Frameworks */,
+				62247FA632CAF0ECD97B78DA /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RecognizeCard;
+			productName = RecognizeCard;
+			productReference = 942078E51D76A81E00E2307D /* RecognizeCard.app */;
+			productType = "com.apple.product-type.application";
+		};
+		942078FD1D76A81E00E2307D /* RecognizeCardTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 942079151D76A81E00E2307D /* Build configuration list for PBXNativeTarget "RecognizeCardTests" */;
+			buildPhases = (
+				942078FA1D76A81E00E2307D /* Sources */,
+				942078FB1D76A81E00E2307D /* Frameworks */,
+				942078FC1D76A81E00E2307D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				942079001D76A81E00E2307D /* PBXTargetDependency */,
+			);
+			name = RecognizeCardTests;
+			productName = RecognizeCardTests;
+			productReference = 942078FE1D76A81E00E2307D /* RecognizeCardTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		942079081D76A81E00E2307D /* RecognizeCardUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 942079181D76A81E00E2307D /* Build configuration list for PBXNativeTarget "RecognizeCardUITests" */;
+			buildPhases = (
+				942079051D76A81E00E2307D /* Sources */,
+				942079061D76A81E00E2307D /* Frameworks */,
+				942079071D76A81E00E2307D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9420790B1D76A81E00E2307D /* PBXTargetDependency */,
+			);
+			name = RecognizeCardUITests;
+			productName = RecognizeCardUITests;
+			productReference = 942079091D76A81E00E2307D /* RecognizeCardUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		942078DD1D76A81E00E2307D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "谭高丰";
+				TargetAttributes = {
+					942078E41D76A81E00E2307D = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					942078FD1D76A81E00E2307D = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 942078E41D76A81E00E2307D;
+					};
+					942079081D76A81E00E2307D = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 942078E41D76A81E00E2307D;
+					};
+				};
+			};
+			buildConfigurationList = 942078E01D76A81E00E2307D /* Build configuration list for PBXProject "RecognizeCard" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 942078DC1D76A81E00E2307D;
+			productRefGroup = 942078E61D76A81E00E2307D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				942078E41D76A81E00E2307D /* RecognizeCard */,
+				942078FD1D76A81E00E2307D /* RecognizeCardTests */,
+				942079081D76A81E00E2307D /* RecognizeCardUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		942078E31D76A81E00E2307D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				942078F81D76A81E00E2307D /* LaunchScreen.storyboard in Resources */,
+				942079261D76C52200E2307D /* tessdata in Resources */,
+				942078F51D76A81E00E2307D /* Assets.xcassets in Resources */,
+				942078F31D76A81E00E2307D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		942078FC1D76A81E00E2307D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		942079071D76A81E00E2307D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		62247FA632CAF0ECD97B78DA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RecognizeCard/Pods-RecognizeCard-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A031F5E466FFC708E66AF7A3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RecognizeCard/Pods-RecognizeCard-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A1625FAA57232035D9B6F180 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		942078E11D76A81E00E2307D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				942078ED1D76A81E00E2307D /* AppDelegate.m in Sources */,
+				942078EA1D76A81E00E2307D /* main.m in Sources */,
+				942079211D76BC8D00E2307D /* RecogizeCardManager.mm in Sources */,
+				942079241D76C20200E2307D /* RecognizeCardViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		942078FA1D76A81E00E2307D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				942079031D76A81E00E2307D /* RecognizeCardTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		942079051D76A81E00E2307D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9420790E1D76A81E00E2307D /* RecognizeCardUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		942079001D76A81E00E2307D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 942078E41D76A81E00E2307D /* RecognizeCard */;
+			targetProxy = 942078FF1D76A81E00E2307D /* PBXContainerItemProxy */;
+		};
+		9420790B1D76A81E00E2307D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 942078E41D76A81E00E2307D /* RecognizeCard */;
+			targetProxy = 9420790A1D76A81E00E2307D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		942078F11D76A81E00E2307D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				942078F21D76A81E00E2307D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		942078F61D76A81E00E2307D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				942078F71D76A81E00E2307D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		942079101D76A81E00E2307D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		942079111D76A81E00E2307D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		942079131D76A81E00E2307D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7CF1B62443E24354F1A2762C /* Pods-RecognizeCard.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = RecognizeCard/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = gaofeng.RecognizeCard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		942079141D76A81E00E2307D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 91F0D5377C0D38B8C6EC29D9 /* Pods-RecognizeCard.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = RecognizeCard/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = gaofeng.RecognizeCard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		942079161D76A81E00E2307D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = RecognizeCardTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = gaofeng.RecognizeCardTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RecognizeCard.app/RecognizeCard";
+			};
+			name = Debug;
+		};
+		942079171D76A81E00E2307D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = RecognizeCardTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = gaofeng.RecognizeCardTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RecognizeCard.app/RecognizeCard";
+			};
+			name = Release;
+		};
+		942079191D76A81E00E2307D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = RecognizeCardUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = gaofeng.RecognizeCardUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = RecognizeCard;
+			};
+			name = Debug;
+		};
+		9420791A1D76A81E00E2307D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = RecognizeCardUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = gaofeng.RecognizeCardUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = RecognizeCard;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		942078E01D76A81E00E2307D /* Build configuration list for PBXProject "RecognizeCard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				942079101D76A81E00E2307D /* Debug */,
+				942079111D76A81E00E2307D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		942079121D76A81E00E2307D /* Build configuration list for PBXNativeTarget "RecognizeCard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				942079131D76A81E00E2307D /* Debug */,
+				942079141D76A81E00E2307D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		942079151D76A81E00E2307D /* Build configuration list for PBXNativeTarget "RecognizeCardTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				942079161D76A81E00E2307D /* Debug */,
+				942079171D76A81E00E2307D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		942079181D76A81E00E2307D /* Build configuration list for PBXNativeTarget "RecognizeCardUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				942079191D76A81E00E2307D /* Debug */,
+				9420791A1D76A81E00E2307D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 942078DD1D76A81E00E2307D /* Project object */;
+}
