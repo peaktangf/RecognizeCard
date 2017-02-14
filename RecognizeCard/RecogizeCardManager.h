@@ -28,4 +28,6 @@ typedef void (^CompleateBlock)(NSString *text);
  */
 - (void)recognizeCardWithImage:(UIImage *)cardImage compleate:(CompleateBlock)compleate;
 
+- (UIImage *)opencvScanCard:(UIImage *)image;
+
 @end

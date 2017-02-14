@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1ADEE452AE696D56E911336A /* libPods-RecognizeCard.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C61B490379A696F6398244C0 /* libPods-RecognizeCard.a */; };
 		942078EA1D76A81E00E2307D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 942078E91D76A81E00E2307D /* main.m */; };
 		942078ED1D76A81E00E2307D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 942078EC1D76A81E00E2307D /* AppDelegate.m */; };
 		942078F31D76A81E00E2307D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 942078F11D76A81E00E2307D /* Main.storyboard */; };
@@ -18,6 +17,7 @@
 		942079211D76BC8D00E2307D /* RecogizeCardManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 942079201D76BC8D00E2307D /* RecogizeCardManager.mm */; };
 		942079241D76C20200E2307D /* RecognizeCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 942079231D76C20200E2307D /* RecognizeCardViewController.m */; };
 		942079261D76C52200E2307D /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = 942079251D76C52200E2307D /* tessdata */; };
+		A6F7119F151242A5F466036C /* libPods-RecognizeCard.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C61B490379A696F6398244C0 /* libPods-RecognizeCard.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +59,7 @@
 		942079221D76C20200E2307D /* RecognizeCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecognizeCardViewController.h; sourceTree = "<group>"; };
 		942079231D76C20200E2307D /* RecognizeCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecognizeCardViewController.m; sourceTree = "<group>"; };
 		942079251D76C52200E2307D /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tessdata; sourceTree = "<group>"; };
+		9459CE091DAC9C1900F44B6E /* libPods-RecognizeCard.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-RecognizeCard.a"; path = "../../../../Users/tangaofeng/Library/Developer/Xcode/DerivedData/RecognizeCard-fpfivazlurjfoabgitpzxuyxtqql/Build/Products/Debug-iphonesimulator/libPods-RecognizeCard.a"; sourceTree = "<group>"; };
 		C61B490379A696F6398244C0 /* libPods-RecognizeCard.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RecognizeCard.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -67,7 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1ADEE452AE696D56E911336A /* libPods-RecognizeCard.a in Frameworks */,
+				A6F7119F151242A5F466036C /* libPods-RecognizeCard.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,6 +101,7 @@
 		8F3848708645224D817CAE3F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9459CE091DAC9C1900F44B6E /* libPods-RecognizeCard.a */,
 				C61B490379A696F6398244C0 /* libPods-RecognizeCard.a */,
 			);
 			name = Frameworks;
@@ -250,6 +252,8 @@
 				TargetAttributes = {
 					942078E41D76A81E00E2307D = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = C5BVKE87WW;
+						ProvisioningStyle = Automatic;
 					};
 					942078FD1D76A81E00E2307D = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -352,7 +356,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run \'pod install\' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -509,9 +513,20 @@
 			baseConfigurationReference = 7CF1B62443E24354F1A2762C /* Pods-RecognizeCard.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = C5BVKE87WW;
 				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/OpenCV\"",
+				);
 				INFOPLIST_FILE = RecognizeCard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/TesseractOCRiOS/TesseractOCR/lib\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = gaofeng.RecognizeCard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -522,7 +537,14 @@
 			baseConfigurationReference = 91F0D5377C0D38B8C6EC29D9 /* Pods-RecognizeCard.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = C5BVKE87WW;
 				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/OpenCV\"",
+				);
 				INFOPLIST_FILE = RecognizeCard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = gaofeng.RecognizeCard;

@@ -52,6 +52,7 @@
     //轮廊检测 
     std::vector<std::vector<cv::Point>> contours;//定义一个容器来存储所有检测到的轮廊
     cv::findContours(resultImage, contours, CV_RETR_TREE, CV_CHAIN_APPROX_SIMPLE, cvPoint(0, 0));
+    //cv::drawContours(resultImage, contours, -1, cv::Scalar(255),4);
     //取出身份证号码区域
     std::vector<cv::Rect> rects;
     cv::Rect numberRect = cv::Rect(0,0,0,0);
