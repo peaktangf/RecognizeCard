@@ -1,4 +1,4 @@
-####一、写在开头
+#### 一、写在开头
   身份证识别，又称OCR技术。OCR技术是光学字符识别的缩写，是通过扫描等光学输入方式将各种票据、报刊、书籍、文稿及其它印刷品的文字转化为图像信息，再利用文字识别技术将图像信息转化为可以使用的计算机输入技术。
 
   因为项目需要，所以这些天查阅了相关资料，想在网上看看有没有大神封装的现成的demo可以用。但是无果，网上关于ocr这一块的资料很少，比较靠谱的都是要收费的，而且价格也不便宜。但是在天朝，收费感觉心里不爽，所以就决定自己研究一番。
@@ -7,9 +7,9 @@
 
 ![最终实现的效果.gif](http://upload-images.jianshu.io/upload_images/1248713-37d71a75530fc59a.gif?imageMogr2/auto-orient/strip)
 
-####二、需要用到的技术
+#### 二、需要用到的技术
 搜了很多资料，发现要进行身份证号码的识别，需要用到以下几种技术:
-- ######图像处理技术
+- ###### 图像处理技术
 包括灰度化处理，二值化，腐蚀，轮廊检测等等。
 
  1. ```灰度化处理```：图片灰度化处理就是将指定图片每个像素点的RGB三个分量通过一定的算法计算出该像素点的灰度值，使图像只含亮度而不含色彩信息。
@@ -21,26 +21,26 @@
  4. ```轮廊检测```：图片经过腐蚀操作后相邻点会连接在一起形成一个大的区域，这个时候通过轮廊检测就可以把每个大的区域找出来，这样就可以定位到身份证上面号码的区域。
 ![轮廊图.png](http://upload-images.jianshu.io/upload_images/1248713-bfb20df29a04730a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-- ######文字识别技术
+- ###### 文字识别技术
 通过识别图像，将图像信息转化为可以使用的计算机输入技术。比如下面这张包含一串数字的图片，通过ocr识别技术可以将图片中包含的数字信息以字符串的方式输出。
 
 ![包含数字的图片.png](http://upload-images.jianshu.io/upload_images/1248713-8b9199aed071b13e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
-####三、开源框架OpenCV和TesseractOCRiOS
-- ######OpenCV（完成图像处理技术）
+ 
+#### 三、开源框架OpenCV和TesseractOCRiOS
+- ###### OpenCV（完成图像处理技术）
   OpenCV是一个开源的跨平台计算机视觉和机器学习库，通俗点的说，就是他给计算机提供了一双眼睛，一双可以从图片中获取信息的眼镜，从而完成人脸识别、身份证识别、去红眼、追踪移动物体等等的图像相关的功能。[opencv官网](http://opencv.org/)
 
-- ######TesseractOCRiOS（完成文字识别技术）
+- ###### TesseractOCRiOS（完成文字识别技术）
   Tesseract是目前可用的最准确的开源OCR引擎，可以读取各种格式的图片并将他们转换成各种语言文本。而TesseractOCRiOS则是针对iOS平台封装的Tesseract引擎库。
 
-####四、实战演示
-- ######创建一个iOS项目
-- ######用CocoPods导入上面两个库
+#### 四、实战演示
+- ###### 创建一个iOS项目
+- ###### 用CocoPods导入上面两个库
 由于OpenCV库文件比较大，所以时间会稍微久一点，耐心等待就是。
 
 ![podfile文件.png](http://upload-images.jianshu.io/upload_images/1248713-32c649f05acf5d64.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-- ######导入完成之后运行项目，会发现报如下错误
+- ###### 导入完成之后运行项目，会发现报如下错误
 
 ![Bitode报错.png](http://upload-images.jianshu.io/upload_images/1248713-296ca01578ad6c92.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
@@ -48,7 +48,7 @@
 
 ![关掉Bitcode.png](http://upload-images.jianshu.io/upload_images/1248713-4d2b784bc23a6837.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-- ######导入TesseractOCRiOS需要的语言包
+- ###### 导入TesseractOCRiOS需要的语言包
   TesseractOCRiOS库中没有自带的语言包，需要我们自己手动导入，我们这里直接到[tesseract-ocr](https://github.com/tesseract-ocr)网站，tessdata即是我们需要用到的语言包。下载下来的语言包有400多兆。这里我们只需要用到英语语言包，所以就只导入eng.traineddata就ok，其他的都删掉。
 
 导入语言包种需要注意几点：
@@ -57,14 +57,14 @@
 
 ![导入tessdata文件夹的方式.png](http://upload-images.jianshu.io/upload_images/1248713-68f07dd7d28ec043.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-- ######创建一个RecogizeCardManager用来管理身份证识别相关的代码。
+- ###### 创建一个RecogizeCardManager用来管理身份证识别相关的代码。
 由于OpenCV和TesseractOCRiOS库都是基于c++编写的，所以需要把RecogizeCardManager.m后缀的.m改成.mm
 
 ![RecogizeCardManager.png](http://upload-images.jianshu.io/upload_images/1248713-c4cc50713f3e0340.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-- ######RecogizeCardManager中的代码
+- ###### RecogizeCardManager中的代码
 
-######.h文件
+###### .h文件
 ```
 #import <Foundation/Foundation.h>
 @class UIImage;
@@ -91,7 +91,7 @@ typedef void (^CompleateBlock)(NSString *text);
 @end 
 ```
 
-######.m文件
+###### .m文件
 ```
 #import "RecogizeCardManager.h"
 #import <opencv2/opencv.hpp>
@@ -179,12 +179,12 @@ typedef void (^CompleateBlock)(NSString *text);
     });
 }
 ```
-- ######RecognizeCardViewController代码
+- ###### RecognizeCardViewController代码
 
-######故事版布局界面
+###### 故事版布局界面
 
 ![故事版布局界面.png](http://upload-images.jianshu.io/upload_images/1248713-986b4b9b54b36436.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-######.m文件
+###### .m文件
 ```
 #import "RecognizeCardViewController.h"
 #import "RecogizeCardManager.h"
@@ -271,16 +271,16 @@ typedef void (^CompleateBlock)(NSString *text);
 @end
 ```
 
-####总结
+#### 总结
   通过上面的实验，该程序对身份证识别的正确率几乎可以达到90%，剩下的10%主要取决于图像的预处理，预处理程序是整个识别系统的关键所在。该系统的原理同样也适用于获取身份证上其他的信息，也可以应用于银行卡、车牌号等的识别。最后针对实现的效果进行一步总结。
-- ######识别的正确率
+- ###### 识别的正确率
 主要取决于腐蚀、取出身份证号码区域（轮廊提取）的算法这几个关键点。
  1. ```腐蚀：``` 腐蚀的参数很重要，关于腐蚀的一些介绍，可以参考这篇文章 [腐蚀与膨胀(Eroding and Dilating)](http://www.opencv.org.cn/opencvdoc/2.3.2/html/doc/tutorials/imgproc/erosion_dilatation/erosion_dilatation.html)
  2. ```取出身份证号码区域的算法（轮廊提取）：``` 所有的处理都是为了在图片中定位到身份证号码的区域，轮廊提取就是这样一个操作。筛选轮廊图的算法很重要但是也是个难点。我从这篇博客[iOS身份证号码识别](http://fengdeng.github.io/2016/08/18/iOS%E5%AE%9E%E7%8E%B0%E8%BA%AB%E4%BB%BD%E8%AF%81%E5%8F%B7%E7%A0%81%E8%AF%86%E5%88%AB/)中找到了思路。要提取身份证号码区域的轮廊，算法的原理就是该轮廊的宽度是所有中最宽的，且宽度的长度必须大于高度的5倍。
 不过这个算法还是存在不少问题。有的时候可能图片背景比较复杂会影响到轮廊的检测，基于这个问题：
    - 一方面可以通过对图片的预处理来进行优化，减少对检测身份证号码区域的干扰
    - 第二个方面就是优化算法。
-- ######识别速度
+- ###### 识别速度
 使用TesseractOCRiOS对比较清晰的文字进行识别速度是比较快的，我试过用一张未经处理的写着数字的图片来处理，识别速度小于5s。但经过二值图处理之后识别的速度就降低了，我认为可以对二值化处理后的图片进一步处理，比如对二值图进行细化描出骨架，然后在对骨架做均匀的膨胀处理，这样得到的身份证号码可能会清晰很多。
 
 这里贴上几个关于OpenCV的学习网站
