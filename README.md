@@ -295,6 +295,6 @@ typedef void (^CompleateBlock)(NSString *text);
 使用TesseractOCRiOS对比较清晰的文字进行识别速度是比较快的，我试过用一张未经处理的写着数字的图片来处理，识别速度小于5s。但经过二值图处理之后识别的速度就降低了，我认为可以对二值化处理后的图片进一步处理，比如对二值图进行细化描出骨架，然后在对骨架做均匀的膨胀处理，这样得到的身份证号码可能会清晰很多。
 
 这里贴上几个关于OpenCV的学习网站
-[OpenCV官方学习文档](http://brightguo.com/opencv/)
-[OpenCV入门指南](http://blog.csdn.net/morewindows/article/category/1291764)
-[OPEN CV for iOS](http://blog.csdn.net/column/details/opencvonios.html)
+- [OpenCV官方学习文档](http://brightguo.com/opencv/)
+- [OpenCV入门指南](http://blog.csdn.net/morewindows/article/category/1291764)
+- [OPEN CV for iOS](http://blog.csdn.net/column/details/opencvonios.html)
